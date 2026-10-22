@@ -1,0 +1,58 @@
+base_model: /path/to/models/Meta-Llama-3-8B
+model_type: LlamaForCausalLM
+tokenizer_type: AutoTokenizer
+load_in_8bit: false
+load_in_4bit: false
+strict: false
+datasets:
+- path: /path/to/datasets/Magpie-Pro-100K/data.jsonl
+  ds_type: json
+  type: sharegpt
+  conversation: llama3
+dataset_prepared_path: /path/to/VAT-LLM/prepared/magpie_llama3_body_only_v1_8192_seed42
+val_set_size: 0.001
+output_dir: /path/to/VAT-LLM/checkpoints/semantic_margin_dense_vat/main
+run_name: vat_llm_semantic_margin_dense_vat_main
+sequence_len: 8192
+sample_packing: true
+eval_sample_packing: false
+pad_to_sequence_len: true
+gradient_accumulation_steps: 8
+micro_batch_size: 1
+eval_batch_size: 1
+num_epochs: 2
+optimizer: paged_adamw_8bit
+lr_scheduler: cosine
+learning_rate: 2.0e-05
+train_on_inputs: false
+group_by_length: false
+bf16: auto
+fp16: null
+tf32: false
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+flash_attention: true
+xformers_attention: null
+warmup_steps: 100
+evals_per_epoch: 3
+save_strategy: steps
+save_steps: 68
+save_total_limit: 1
+logging_steps: 1
+weight_decay: 0.0
+seed: 42
+save_safetensors: true
+special_tokens:
+  pad_token: <|end_of_text|>
+use_vat: true
+vat_radius_mode: relative
+vat_power_iterations: 1
+vat_xi: 0.001
+vat_xi_mode: absolute
+vat_rho: 0.03
+vat_lambda: 0.25
+vat_density_mode: vocab_radius_count
+vat_density_vocabulary_chunk_size: 2048
+vat_semantic_margin_manifest: /path/to/VAT-LLM/results/semantic_margin/margin/semantic_margin_manifest.json
+vat_hparams_locked: true

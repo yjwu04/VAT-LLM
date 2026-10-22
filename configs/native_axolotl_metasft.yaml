@@ -1,0 +1,70 @@
+# Native Axolotl labels/template plus a uniform offline metamorphic candidate.
+base_model: /path/to/models/Meta-Llama-3-8B
+model_type: LlamaForCausalLM
+tokenizer_type: AutoTokenizer
+load_in_8bit: false
+load_in_4bit: false
+strict: false
+datasets:
+- path: /path/to/datasets/Magpie-Pro-100K/data.jsonl
+  ds_type: json
+  type: sharegpt
+  conversation: llama3
+dataset_prepared_path: /path/to/VAT-LLM/prepared/magpie_llama3_native_axolotl_v0p4p0_8192_seed42
+val_set_size: 0.001
+output_dir: /path/to/VAT-LLM/checkpoints/native_axolotl/metasft
+run_name: vat_llm_native_axolotl_metasft
+sequence_len: 8192
+sample_packing: true
+eval_sample_packing: false
+pad_to_sequence_len: true
+gradient_accumulation_steps: 8
+micro_batch_size: 1
+eval_batch_size: 1
+num_epochs: 2
+optimizer: paged_adamw_8bit
+lr_scheduler: cosine
+learning_rate: 2.0e-05
+train_on_inputs: false
+group_by_length: false
+bf16: auto
+fp16: null
+tf32: false
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+flash_attention: true
+xformers_attention: null
+warmup_steps: 100
+evals_per_epoch: 3
+save_strategy: steps
+save_steps: 68
+save_total_limit: 1
+logging_steps: 1
+weight_decay: 0.0
+seed: 42
+save_safetensors: true
+special_tokens:
+  pad_token: <|end_of_text|>
+
+native_axolotl_preprocessing: true
+use_metamorphic_vat: true
+metamorphic_candidate_db: /path/to/VAT-LLM/artifacts/metamorphic_vat/native_candidates.sqlite3
+metamorphic_sampling_seed: 42
+
+# The shared native-metamorphic trainer infrastructure supplies compact logits,
+# candidate lookup, exact resume, and contracts. This mode ignores VAT lambda
+# and optimizes exactly 0.5*CE(clean)+0.5*CE(transformed).
+use_vat: true
+vat_perturb_mask_source: native_llama3_input_ids
+vat_perturbation_mode: metamorphic_text_uniform_sft
+vat_radius_mode: relative
+vat_rho: 0.03
+vat_xi: 0.001
+vat_xi_mode: absolute
+vat_power_iterations: 1
+vat_lambda: 0.03
+vat_lambda_schedule: linear_warmup
+vat_lambda_warmup_fraction: 0.2
+vat_gradient_telemetry_interval_steps: 0
+vat_hparams_locked: true

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vat-llm"
+version = "0.1.0"
+description = "Question-only VAT for Magpie Llama-3-8B SFT on Axolotl v0.4.0"
+requires-python = "==3.10.*"
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+  "pytest==8.2.2",
+  "PyYAML==6.0.1",
+]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+  "gpu: requires a CUDA GPU",
+  "integration: requires the pinned Axolotl/model stack",
+]

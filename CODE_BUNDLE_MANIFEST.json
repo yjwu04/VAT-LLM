@@ -1,0 +1,188 @@
+{
+  "file_count": 36,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "354c89fe0103ef66493c3d26ecd452c8ab5df6d94aee1f16267c577637ef5cde",
+      "size": 341
+    },
+    {
+      "path": "README.md",
+      "sha256": "0577337ec37d4a716748ac885cee3f837491c9c14a9a4089fe4fd8399e8d141f",
+      "size": 1490
+    },
+    {
+      "path": "configs/dense_vat_sft.yaml",
+      "sha256": "9f73a18240fa2f8c427797fec07f38a0f3234072723eabd810a0996b8c5feba6",
+      "size": 1504
+    },
+    {
+      "path": "configs/eot_inclusive_vanilla_sft.yaml",
+      "sha256": "93f921a9a34a06a776b6d0f2c8136fe1ebd66ac418c189426f0eae129cf25c20",
+      "size": 1337
+    },
+    {
+      "path": "configs/eot_inclusive_vat_rho_0p03_lambda_warmup.yaml",
+      "sha256": "58ba51890883c9d052b0870c29fc94d785a3c77acc195f13174531898a01b5f1",
+      "size": 1706
+    },
+    {
+      "path": "configs/native_axolotl_metamorphic_vat.yaml",
+      "sha256": "e019342afe4d6b6854283ab2b19fc8abbda78010272a04233268039516336fc5",
+      "size": 1981
+    },
+    {
+      "path": "configs/native_axolotl_metasft.yaml",
+      "sha256": "9c2661ad12cbe8d1770c7ae85e4889e3d04d2b3db4f9b96371e6735ce5cec592",
+      "size": 2011
+    },
+    {
+      "path": "configs/native_axolotl_metavat_v2.yaml",
+      "sha256": "375a459cec84c109d79476da109ceaf6061016b2312e08a5934de36db73a5b01",
+      "size": 1763
+    },
+    {
+      "path": "configs/native_axolotl_metavat_v3.yaml",
+      "sha256": "4b3a0e18c45bbcdc4aba39d56f06e83799c8b15e450884c605f3d52669af68bd",
+      "size": 1878
+    },
+    {
+      "path": "configs/native_axolotl_vanilla_sft.yaml",
+      "sha256": "56b34aced99dc4d09f2df5da5fe06567a9e3334db31be5a24cc8e275f7692fee",
+      "size": 1344
+    },
+    {
+      "path": "configs/native_axolotl_vat_rho_0p03_lambda_warmup.yaml",
+      "sha256": "de4cf2eac57c09269e837df378d3282924bf34a62bf9c4edf98146be71bcafb9",
+      "size": 1707
+    },
+    {
+      "path": "configs/question_only_minmax_adversarial_sft.yaml",
+      "sha256": "684e429ccda51223d856e196c0bab64958540db3ccdcfd10bf783cae3b9573ff",
+      "size": 1242
+    },
+    {
+      "path": "configs/question_vat_sft.yaml",
+      "sha256": "f03e87fab41164791fd2b72626afff4e1d2b8791f4124c70c20677e47f34f148",
+      "size": 1446
+    },
+    {
+      "path": "configs/random_neighbor_vat_sft.yaml",
+      "sha256": "07ff040e876a90abcfda5ac0f25cc921c9e45ee26f424505b1fd1f2daabda476",
+      "size": 1429
+    },
+    {
+      "path": "configs/semantic_margin_dense_vat_sft.yaml",
+      "sha256": "d3a19439465a5e9ca7a2868d9209cffdbbc0c1e5f551ece42e88f7205f1d8e6d",
+      "size": 1510
+    },
+    {
+      "path": "configs/vanilla_sft.yaml",
+      "sha256": "6acb0fc3e12ca4db3b8d4e53a806b9cd32d60e6626b8185684dc763ba86e1c81",
+      "size": 1379
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "0ed47a7a3d60cedb7430a2989e2a5a7408d350f7301c5455f674470f6375d6b7",
+      "size": 634
+    },
+    {
+      "path": "scripts/train.py",
+      "sha256": "b6d2cbabca34cb1c7a28643e684ecfb12b75a4506b755d298fd25f349bb92e82",
+      "size": 10625
+    },
+    {
+      "path": "src/__init__.py",
+      "sha256": "e09468661cf29abfc8d99062177645812544622aa980289d185505663f20e937",
+      "size": 66
+    },
+    {
+      "path": "src/artifact_fingerprint.py",
+      "sha256": "d60a70473c3d0199d69294064792a4f963639dbd03829ad3c8449ba1072241db",
+      "size": 3220
+    },
+    {
+      "path": "src/axolotl_integration.py",
+      "sha256": "03f237516eb5c4fa245113930f1843831e6796e5c6f482c825bfa29422a6b9d6",
+      "size": 12054
+    },
+    {
+      "path": "src/dataset_view.py",
+      "sha256": "725b438880c5b7f659a3bb32c0b6f7c9a2d2ac3dae5e250586d3f62be25d306e",
+      "size": 11616
+    },
+    {
+      "path": "src/metamorphic_candidates.py",
+      "sha256": "ca437164cfed82c79fa9d6fda7869629af54e21edf283add75dc05f900cf857d",
+      "size": 24525
+    },
+    {
+      "path": "src/metamorphic_vat.py",
+      "sha256": "31276e2d357fe80d6c5bca06db98d9e22e25e7f05500df9f96a04b0a1577de4d",
+      "size": 41643
+    },
+    {
+      "path": "src/semantic_margin.py",
+      "sha256": "2c52e5dff07ee9f44db970811b045f33742062ddebf13aa4ca4c6c8b3cc24aac",
+      "size": 10380
+    },
+    {
+      "path": "src/user_token_mask.py",
+      "sha256": "a050d1808ff87fa1dd83d2aa601714e58ab607ceed40e8b99ddf1d73edb09386",
+      "size": 39657
+    },
+    {
+      "path": "src/vat_loss.py",
+      "sha256": "02f12b2645f0c99df411c87d8a5189d203cc9b7483eccab8351c2bc9a6a3ef49",
+      "size": 94952
+    },
+    {
+      "path": "src/vat_trainer.py",
+      "sha256": "b4d79cf4a8c24d8709e53dea28f34f09649e40a9c3481e5ffce402da6fcf48de",
+      "size": 181974
+    },
+    {
+      "path": "tests/test_artifact_fingerprint.py",
+      "sha256": "53b6cb1fba485c206156ad34e93609769d18b31821d1d4e11caf6b1301dd018e",
+      "size": 1791
+    },
+    {
+      "path": "tests/test_axolotl_integration.py",
+      "sha256": "574776d86459c654b5b5bd5fbf1aa42b9c43e951b7762e5a907e30e77f58a8ea",
+      "size": 8113
+    },
+    {
+      "path": "tests/test_dataset_view.py",
+      "sha256": "a52a1ca6a10d8b95b15974f57fb4e976277edee2cc364b69ab5b01d22cb5d134",
+      "size": 3455
+    },
+    {
+      "path": "tests/test_metamorphic_vat.py",
+      "sha256": "fa92f1f5ccd7661411e6338a4d91682ae82996df195b0abf5a07757b38b04d5b",
+      "size": 10631
+    },
+    {
+      "path": "tests/test_semantic_margin.py",
+      "sha256": "766fd64d1ba37fc68d5872c3adc4d2857d5a5451089ed57949d896e616cdf86a",
+      "size": 5369
+    },
+    {
+      "path": "tests/test_user_token_mask.py",
+      "sha256": "a3a3799cb22ee4bfd6e7dbd9dff9cf8026a929f9c9401beabd131a60b8d49e2a",
+      "size": 25051
+    },
+    {
+      "path": "tests/test_vat_loss.py",
+      "sha256": "a48f7807102704b520bbbbb3fe160e9324d95734a7bba8a51cf5b3481ce7593d",
+      "size": 55763
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "92eb99347602e693da7b2fbac526756c3f1a7156526b48d2c24c78d3c7003925",
+      "size": 9235
+    }
+  ],
+  "purpose": "public VAT-LLM source release",
+  "schema_version": 1,
+  "total_bytes": 574822
+}
